@@ -24,6 +24,7 @@ def parse_settlements(rows: list[dict]) -> dict:
         if price <= 0:
             continue
         code = (r.get("Contract") or "").strip()
+        # 月份字串字典序比較即可：週契約（如 202606W4）僅存在於指數期貨，本 bot 不查那些代碼
         if code and (code not in best or month < best[code][0]):
             best[code] = (month, price)
         date = r.get("Date", date)
