@@ -248,19 +248,19 @@ git commit -m "feat: parse TAIFEX stock-futures margin table"
 from crawler.settlements import parse_settlements
 
 ROWS = [
+    # 盤後時段帶「數字」結算價，且排在最前：時段過濾一旦失效，CSF 會變 34.5 而非 34.2
+    {"Date": "20260611", "Contract": "CSF", "ContractMonth(Week)": "202606",
+     "SettlementPrice": "34.5", "TradingSession": "盤後"},
     # 正常列：近月 + 次月（應取近月 202606）
     {"Date": "20260611", "Contract": "CSF", "ContractMonth(Week)": "202606",
      "SettlementPrice": "34.2", "TradingSession": "一般"},
     {"Date": "20260611", "Contract": "CSF", "ContractMonth(Week)": "202607",
      "SettlementPrice": "34.25", "TradingSession": "一般"},
-    # 盤後時段：略過
-    {"Date": "20260611", "Contract": "CSF", "ContractMonth(Week)": "202606",
-     "SettlementPrice": "NULL", "TradingSession": "盤後"},
-    # 價差單（月份含 /）：略過
-    {"Date": "20260611", "Contract": "CSF", "ContractMonth(Week)": "202606/202607",
+    # 價差單（月份含 /），且 CDF 沒有其他有效列：價差過濾一旦失效，CDF 會出現在結果
+    {"Date": "20260611", "Contract": "CDF", "ContractMonth(Week)": "202606/202607",
      "SettlementPrice": "0.16", "TradingSession": "一般"},
-    # 無效結算價：略過（CDF 不應出現在結果）
-    {"Date": "20260611", "Contract": "CDF", "ContractMonth(Week)": "202606",
+    # 無效結算價：略過（ZZF 不應出現在結果）
+    {"Date": "20260611", "Contract": "ZZF", "ContractMonth(Week)": "202606",
      "SettlementPrice": "-", "TradingSession": "一般"},
 ]
 
