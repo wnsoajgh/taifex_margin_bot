@@ -12,20 +12,14 @@
 
 | 資料 | 來源 | 重點 |
 |---|---|---|
-| 保證金比例 | `GET https://www.taifex.com.tw/cht/5/stockMargining` | server-rendered HTML；四張子表後綴 `_a`(股票期貨 292 檔)/`_b`(ETF 期貨)/`_c`/`_d`(選擇權，不解析)。td 的 `headers` 屬性是穩定錨點：`bond_id_a`、`commodity_stock_id_a`、`bond_ch_name1_a`、`bond_ch_name2_a`、`bond_cate_a`、`bond_rate1/2/3`（注意：`_a` 表的 rate 欄 **無** `_a` 後綴；`_b` 表為 `bond_rate1_b` 等）。儲存格文字含尾隨空白需 strip。頁面含「更新日期：YYYY/MM/DD」 |
+| 保證金比例 | `GET https://www.taifex.com.tw/cht/5/stockMargining` | server-rendered HTML；四張子表後綴 `_a`(股票期貨 292 檔)/`_b`(ETF 期貨)/`_c`/`_d`(選擇權，不解析)。td 的 `headers` 屬性是穩定錨點：`bond_id_a`、`commodity_stock_id_a`、`bond_ch_name1_a`、`bond_ch_name2_a`、`bond_cate_a`、`bond_rate1/2/3`（注意：`_a` 表的 rate 欄 **無** `_a` 後綴；`_b` 表為 `bond_rate1_b` 等，且 `_b` 表的值為固定金額字串如 "52,000"、無 `bond_cate_b` 級距欄）。儲存格文字含尾隨空白需 strip。頁面含「更新日期：YYYY/MM/DD」 |
 | 結算價 | `GET https://openapi.taifex.com.tw/v1/DailyMarketReportFut` | 全市場期貨 JSON (~840KB)。欄位：`Date`("20260611")、`Contract`("CSF")、`ContractMonth(Week)`("202606"，價差單含 "/")、`SettlementPrice`(可能為 "NULL"、"-")、`TradingSession`("一般"/"盤後")。取 `一般` 時段、非價差、最近月 |
 | 即時股價 | `GET https://query1.finance.yahoo.com/v8/finance/chart/{id}.TW?range=1d&interval=1d`（上櫃為 `.TWO`）；備援 `GET https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_{id}.tw`（上櫃 `otc_{id}.tw`） | 皆需 `User-Agent: Mozilla/5.0`。Yahoo 取 `chart.result[0].meta.regularMarketPrice`；MIS 取 `msgArray[0].z`（"-" 表示無成交） |
 
-**契約乘數規則（金額正確性關鍵）:**
+**保證金計算規則（金額正確性關鍵；2026-06-12 對實際頁面 fixture 驗證後修正）:**
 
-| 類別 | 名稱開頭 | 乘數 |
-|---|---|---|
-| stock (`_a` 表) | 非「小型」 | 2,000 股 |
-| stock | 「小型」 | 100 股 |
-| etf (`_b` 表) | 非「小型」 | 10,000 受益權單位 |
-| etf | 「小型」 | 1,000 受益權單位 |
-
-`保證金 = 價格 × 乘數 × 適用比例`，四捨五入到整數元（round half up，**勿用 Python 內建 `round()`**，它是銀行家捨入）。
+- **股票期貨（`_a` 表）**：表列為「級距 + 三種適用比例」。`保證金 = 價格 × 乘數 × 適用比例`，乘數：一般 2,000 股、名稱以「小型」開頭 100 股。四捨五入到整數元（round half up，**勿用 Python 內建 `round()`**，它是銀行家捨入）。
+- **ETF 期貨（`_b` 表）**：表列即為**固定金額**（結算/維持/原始保證金，單位元，例：NYF 元大台灣50ETF期貨 = 52,000/54,000/71,000），**無級距欄（無 `bond_cate_b`）、無比例、不需價格計算**——直接顯示公告金額，也不需即時價與結算價。
 
 **最終檔案結構:**
 
@@ -137,6 +131,14 @@ def test_contract_count_and_categories():
     assert cats == {"stock", "etf"}
 
 
+def test_parses_etf_row_as_fixed_amounts():
+    data = _load()
+    nyf = next(c for c in data["contracts"] if c["code"] == "NYF")
+    assert nyf["category"] == "etf"
+    assert nyf["initial_amount"] >= nyf["maintenance_amount"] >= nyf["clearing_amount"] >= 1000
+    assert "initial_rate" not in nyf and "level" not in nyf
+
+
 def test_updated_at_format():
     data = _load()
     assert len(data["updated_at"]) == 10 and data["updated_at"][4] == "/"
@@ -178,11 +180,14 @@ def _pct(text: str) -> float:
     return round(float(text.replace("%", "").strip()) / 100, 6)
 
 
+def _ntd(text: str) -> int:
+    return int(text.replace(",", "").strip())
+
+
 def parse_margins(html: str) -> dict:
     soup = BeautifulSoup(html, "lxml")
     contracts = []
     for suffix, category in TABLES.items():
-        rate_sfx = "" if suffix == "a" else f"_{suffix}"
         for id_td in soup.find_all("td", attrs={"headers": f"bond_id_{suffix}"}):
             tr = id_td.find_parent("tr")
 
@@ -190,17 +195,27 @@ def parse_margins(html: str) -> dict:
                 td = tr.find("td", attrs={"headers": header})
                 return td.get_text(strip=True) if td else ""
 
-            contracts.append({
+            row = {
                 "code": cell(f"bond_id_{suffix}"),
                 "stock_id": cell(f"commodity_stock_id_{suffix}"),
                 "name": cell(f"bond_ch_name1_{suffix}"),
                 "underlying_name": cell(f"bond_ch_name2_{suffix}"),
                 "category": category,
-                "level": cell(f"bond_cate_{suffix}"),
-                "clearing_rate": _pct(cell(f"bond_rate1{rate_sfx}")),
-                "maintenance_rate": _pct(cell(f"bond_rate2{rate_sfx}")),
-                "initial_rate": _pct(cell(f"bond_rate3{rate_sfx}")),
-            })
+            }
+            if category == "stock":   # _a 表：級距 + 比例（rate 欄無後綴）
+                row.update({
+                    "level": cell("bond_cate_a"),
+                    "clearing_rate": _pct(cell("bond_rate1")),
+                    "maintenance_rate": _pct(cell("bond_rate2")),
+                    "initial_rate": _pct(cell("bond_rate3")),
+                })
+            else:                     # _b 表：ETF 期貨為公告固定金額（元）
+                row.update({
+                    "clearing_amount": _ntd(cell(f"bond_rate1_{suffix}")),
+                    "maintenance_amount": _ntd(cell(f"bond_rate2_{suffix}")),
+                    "initial_amount": _ntd(cell(f"bond_rate3_{suffix}")),
+                })
+            contracts.append(row)
     m = re.search(r"更新日期：(\d{4}/\d{2}/\d{2})", html)
     return {"updated_at": m.group(1) if m else "", "contracts": contracts}
 ```
@@ -208,7 +223,7 @@ def parse_margins(html: str) -> dict:
 - [ ] **Step 5: 跑測試確認通過**
 
 Run: `.venv/Scripts/pytest tests/test_margins.py -v`
-Expected: 4 passed
+Expected: 5 passed
 
 - [ ] **Step 6: Commit**
 
@@ -348,6 +363,16 @@ def test_validate_margins_bad_rate():
         validate_margins(_margins(rate=0.9))
 
 
+def test_validate_margins_bad_etf_amount():
+    data = _margins()
+    data["contracts"].append({
+        "code": "NYF", "stock_id": "0050", "name": "元大台灣50ETF期貨",
+        "underlying_name": "x", "category": "etf",
+        "clearing_amount": 52000, "maintenance_amount": 54000, "initial_amount": 100})
+    with pytest.raises(ValueError, match="amount"):
+        validate_margins(data)
+
+
 def test_validate_settlements_coverage():
     codes = {c["code"] for c in _margins()["contracts"]}
     prices = {c: 10.0 for c in list(codes)[:130]}
@@ -385,12 +410,17 @@ def validate_margins(data: dict) -> None:
     if not data["updated_at"]:
         raise ValueError("missing updated_at date")
     for c in rows:
-        for k in ("clearing_rate", "maintenance_rate", "initial_rate"):
-            # 範圍放寬於 spec 的 5%-40%：部分 ETF 期貨結算比例較低、處置股票加收較高
-            if not 0.03 <= c[k] <= 0.45:
-                raise ValueError(f"{c['code']} {k} out of range: {c[k]}")
         if not (c["code"] and c["stock_id"] and c["name"]):
             raise ValueError(f"empty field in row: {c}")
+        if c["category"] == "stock":
+            for k in ("clearing_rate", "maintenance_rate", "initial_rate"):
+                # 範圍放寬於 spec 的 5%-40%：處置股票加收後比例較高
+                if not 0.03 <= c[k] <= 0.45:
+                    raise ValueError(f"{c['code']} {k} rate out of range: {c[k]}")
+        else:  # ETF 期貨為公告固定金額
+            for k in ("clearing_amount", "maintenance_amount", "initial_amount"):
+                if not 1_000 <= c[k] <= 10_000_000:
+                    raise ValueError(f"{c['code']} {k} amount out of range: {c[k]}")
 
 
 def validate_settlements(data: dict, margin_codes: set[str]) -> None:
@@ -420,7 +450,7 @@ if __name__ == "__main__":
 - [ ] **Step 4: 跑測試確認通過**
 
 Run: `.venv/Scripts/pytest tests/test_run.py -v`
-Expected: 5 passed
+Expected: 6 passed
 
 - [ ] **Step 5: 實際跑一次爬蟲（整合驗證）**
 
@@ -638,10 +668,18 @@ CSF = {"code": "CSF", "stock_id": "1605", "name": "華新期貨",
 
 
 def test_multiplier_rules():
-    assert multiplier({"category": "stock", "name": "華新期貨"}) == 2000
-    assert multiplier({"category": "stock", "name": "小型台積電期貨"}) == 100
-    assert multiplier({"category": "etf", "name": "元大台灣50ETF期貨"}) == 10000
-    assert multiplier({"category": "etf", "name": "小型元大台灣50ETF期貨"}) == 1000
+    assert multiplier({"name": "華新期貨"}) == 2000
+    assert multiplier({"name": "小型台積電期貨"}) == 100
+
+
+def test_format_reply_etf_fixed_amounts():
+    nyf = {"code": "NYF", "stock_id": "0050", "name": "元大台灣50ETF期貨",
+           "underlying_name": "元大台灣卓越50證券投資信託基金", "category": "etf",
+           "clearing_amount": 52000, "maintenance_amount": 54000, "initial_amount": 71000}
+    msg = format_reply(nyf, settlement_price=None, settlement_date="",
+                       live_price=None, data_date="2026/06/11", stale=False)
+    assert "71,000" in msg and "54,000" in msg and "52,000" in msg
+    assert "固定金額" in msg and "結算價" not in msg
 
 
 def test_calc_margin_rounds_half_up():
@@ -689,10 +727,8 @@ Expected: FAIL — `ModuleNotFoundError`
 
 ```python
 def multiplier(contract: dict) -> int:
-    mini = contract["name"].startswith("小型")
-    if contract["category"] == "etf":
-        return 1_000 if mini else 10_000
-    return 100 if mini else 2_000
+    # 僅股票期貨以價格計算保證金；「小型」契約乘數為 100 股
+    return 100 if contract["name"].startswith("小型") else 2_000
 
 
 def calc_margin(price: float, rate: float, mult: int) -> int:
@@ -703,13 +739,30 @@ def _fmt_date(yyyymmdd: str) -> str:
     return f"{yyyymmdd[4:6]}/{yyyymmdd[6:8]}" if len(yyyymmdd) == 8 else yyyymmdd
 
 
+def _footer(data_date: str, stale: bool) -> list[str]:
+    lines = ["", f"資料日期：{data_date}"]
+    if stale:
+        lines.append("⚠️ 資料日期較舊，金額僅供參考")
+    return lines
+
+
 def format_reply(contract: dict, settlement_price: float | None, settlement_date: str,
                  live_price: float | None, data_date: str, stale: bool) -> str:
-    mult = multiplier(contract)
-    init, maint = contract["initial_rate"], contract["maintenance_rate"]
-    lines = [
+    header = [
         f"{contract['name']} ({contract['code']})",
         f"標的：{contract['stock_id']} {contract['underlying_name']}",
+    ]
+    if contract["category"] == "etf":
+        return "\n".join(header + [
+            "ETF 期貨保證金為公告固定金額：",
+            f"原始：{contract['initial_amount']:,} 元",
+            f"維持：{contract['maintenance_amount']:,} 元",
+            f"結算：{contract['clearing_amount']:,} 元",
+        ] + _footer(data_date, stale))
+
+    mult = multiplier(contract)
+    init, maint = contract["initial_rate"], contract["maintenance_rate"]
+    lines = header + [
         f"{contract['level']}｜原始 {init:.2%}｜維持 {maint:.2%}｜結算 {contract['clearing_rate']:.2%}",
         "",
     ]
@@ -729,16 +782,13 @@ def format_reply(contract: dict, settlement_price: float | None, settlement_date
         ]
     else:
         lines.append("📈 即時價暫時無法取得")
-    lines += ["", f"資料日期：{data_date}"]
-    if stale:
-        lines.append("⚠️ 資料日期較舊，金額僅供參考")
-    return "\n".join(lines)
+    return "\n".join(lines + _footer(data_date, stale))
 ```
 
 - [ ] **Step 4: 跑測試確認通過**
 
 Run: `.venv/Scripts/pytest tests/test_reply.py -v`
-Expected: 6 passed
+Expected: 7 passed
 
 - [ ] **Step 5: Commit**
 
@@ -1083,11 +1133,12 @@ def _answer(query: str) -> str:
         return f"找不到「{query}」相關的股票期貨。\n{HELP_TEXT}"
 
     settlements = data_source.get_settlements()
+    is_etf = hit["category"] == "etf"   # ETF 期貨為公告固定金額，不需任何報價
     return format_reply(
         hit,
-        settlement_price=settlements["prices"].get(hit["code"]),
+        settlement_price=None if is_etf else settlements["prices"].get(hit["code"]),
         settlement_date=settlements.get("date", ""),
-        live_price=quotes.get_live_price(hit["stock_id"]),
+        live_price=None if is_etf else quotes.get_live_price(hit["stock_id"]),
         data_date=margins["updated_at"],
         stale=_is_stale(margins["updated_at"]),
     )
@@ -1233,7 +1284,7 @@ Expected: 3 passed
 - [ ] **Step 5: 全套測試**
 
 Run: `.venv/Scripts/pytest -v`
-Expected: 全部通過（40 個測試）
+Expected: 全部通過（43 個測試）
 
 - [ ] **Step 6: Commit**
 
