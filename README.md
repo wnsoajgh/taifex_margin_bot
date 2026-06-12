@@ -2,6 +2,21 @@
 
 LINE 傳「P/華新」「P/1605」「P/CSF」→ 回覆保證金級距、依結算價的正式保證金、依即時價的盤中估算。ETF 期貨直接顯示期交所公告的固定保證金金額；處置中契約會加註警示。**只有 `P/` 開頭的訊息會觸發回覆**（不分大小寫、容許全形），其他訊息一律不回應。
 
+訂閱保證金調整通知（依 LINE userId 區分，多人各自獨立；請在一對一聊天使用）：
+
+- `P/+華新`：訂閱華新期貨的保證金調整通知（級距/比例/處置變動時，每日 18:00 爬完彙整推播，一人一天最多一則）
+- `P/-華新`：取消訂閱
+- `P/訂閱`：列出目前訂閱
+
+### 訂閱功能的額外設定
+
+1. 建立 **secret gist**（https://gist.github.com/ → 檔名 `subscriptions.json`、內容 `{}`、選 Create **secret** gist），記下網址中的 gist ID。
+2. 建立 **GitHub Personal Access Token**（Settings → Developer settings → Tokens (classic) → 只勾 `gist` scope）。
+3. **Render** 環境變數新增：`GIST_TOKEN`（PAT）、`SUBS_GIST_ID`（gist ID）。
+4. **GitHub repo** → Settings → Secrets and variables → Actions → 新增三個 Repository secrets：`GIST_TOKEN`、`SUBS_GIST_ID`、`LINE_CHANNEL_ACCESS_TOKEN`（與 Render 上同值）。
+
+推播額度：LINE 免費方案每月 200 則推播；通知採每人每日彙整一則，3 位使用者最壞情況約 66 則/月。
+
 注意：金額為期交所公告之最低標準；券商（尤其對處置股）可能自行加收，實際以券商為準。
 
 ## 架構

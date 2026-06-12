@@ -102,9 +102,17 @@ GitHub Actions（每日排程）                Render 免費方案
   - 保證金計算——級距比例 × 結算價的金額正確性、四捨五入。
 - 整合驗證（手動）：本機以 LINE 官方的 webhook 測試 + ngrok/實際部署後傳訊驗證。
 
+## 訂閱與主動推播（2026-06-12 追加，使用者核准）
+
+- 指令：`P/+名稱` 訂閱、`P/-名稱` 退訂、`P/訂閱` 列清單；訂閱以 LINE userId 區分（多人各自獨立），僅一對一聊天可用。
+- 儲存：GitHub **secret gist**（`subscriptions.json`，`{userId: [codes]}`）。bot 經 GitHub API 讀寫（env：`GIST_TOKEN`、`SUBS_GIST_ID`）。不放 public repo 因含 userId。
+- 偵測：每日 Actions 爬完後，比對爬前/爬後的 `data/margins.json`（級距、比例、ETF 金額變動）。
+- 推播：LINE push API，**一人一天最多一則**（彙整當日所有訂閱契約變動）。從 Actions 發（secrets：`LINE_CHANNEL_ACCESS_TOKEN`、`GIST_TOKEN`、`SUBS_GIST_ID`）。順序：先 commit 資料再推播，推播失敗紅燈但不影響資料。
+- 額度：3 使用者 × 最多 22 交易日 = 66 則/月 < 免費 200 則。
+
 ## 不做的事（YAGNI）
 
-- 不做歷史查詢、不做保證金異動主動推播（push 訊息有額度，之後想要再加）。
+- 不做歷史查詢。
 - 不另外過濾商品類型：保證金一覽表上有的契約（含 ETF 期貨）全部支援。
 - 不做多語言、不做群組指令前綴。
 

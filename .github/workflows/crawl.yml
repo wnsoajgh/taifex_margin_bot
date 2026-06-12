@@ -17,6 +17,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+      - name: Snapshot yesterday's margins for change detection
+        run: cp data/margins.json /tmp/margins_old.json 2>/dev/null || echo '{"updated_at":"","contracts":[]}' > /tmp/margins_old.json
       - run: python -m crawler.run
       - name: Commit updated data
         run: |
@@ -25,3 +27,10 @@ jobs:
           git add data/
           git diff --cached --quiet || git commit -m "data: daily update"
           git push
+      # 推播放在 commit 之後：通知失敗只會讓 run 變紅，資料不受影響
+      - name: Notify subscribers of margin changes
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          SUBS_GIST_ID: ${{ secrets.SUBS_GIST_ID }}
+        run: python -m crawler.notify /tmp/margins_old.json data/margins.json
