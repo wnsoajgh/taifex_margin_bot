@@ -27,7 +27,7 @@ def get_live_price(stock_id: str) -> float | None:
             price = parse_yahoo_price(resp.json())
             if price is not None and price > 0:   # 0 不是有效報價，繼續嘗試下一來源
                 return price
-        except httpx.HTTPError:
+        except (httpx.HTTPError, ValueError):   # ValueError 含限流時非 JSON 回應的解碼錯誤
             pass
     for market in ("tse", "otc"):
         try:
