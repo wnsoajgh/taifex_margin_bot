@@ -27,7 +27,10 @@ def _reply(reply_token: str, text: str) -> None:
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def on_text_message(event: MessageEvent) -> None:
-    _reply(event.reply_token, service.build_answer(event.message.text))
+    query = service.extract_query(event.message.text)
+    if query is None:   # 非 P/ 開頭的訊息一律不回應（避免群組洗版）
+        return
+    _reply(event.reply_token, service.build_answer(query))
 
 
 @app.get("/health")

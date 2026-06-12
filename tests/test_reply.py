@@ -11,6 +11,22 @@ def test_multiplier_rules():
     assert multiplier({"name": "小型台積電期貨"}) == 100
 
 
+def test_format_reply_disposal_contract():
+    dqf = dict(CSF, code="DQF", stock_id="3481", name="群創期貨",
+               underlying_name="群創光電股份有限公司", level="",
+               clearing_rate=0.18, maintenance_rate=0.1863, initial_rate=0.243)
+    msg = format_reply(dqf, settlement_price=48.05, settlement_date="20260612",
+                       live_price=None, data_date="2026/06/12", stale=False)
+    assert "處置中" in msg and "另行再加收" in msg
+    assert f"{int(48.05 * 2000 * 0.243 + 0.5):,}" in msg          # 23,352
+
+
+def test_format_reply_normal_contract_has_minimum_note_no_disposal():
+    msg = format_reply(CSF, settlement_price=34.2, settlement_date="20260611",
+                       live_price=None, data_date="2026/06/11", stale=False)
+    assert "最低標準" in msg and "處置中" not in msg
+
+
 def test_format_reply_etf_fixed_amounts():
     nyf = {"code": "NYF", "stock_id": "0050", "name": "元大台灣50ETF期貨",
            "underlying_name": "元大台灣卓越50證券投資信託基金", "category": "etf",

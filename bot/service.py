@@ -1,4 +1,5 @@
 import logging
+import unicodedata
 from datetime import date, datetime
 
 from bot import data_source, quotes
@@ -7,7 +8,15 @@ from bot.reply import format_reply
 
 log = logging.getLogger(__name__)
 STALE_DAYS = 3
-HELP_TEXT = "請輸入股票名稱、代號或期貨代碼，例如：華新、1605、CSF"
+HELP_TEXT = "請輸入 P/股票名稱、P/代號 或 P/期貨代碼，例如：P/華新、P/1605、P/CSF"
+
+
+def extract_query(text: str) -> str | None:
+    """只回應「P/查詢字」格式（不分大小寫、容許全形 Ｐ／）；其他訊息回 None 表示不回覆。"""
+    t = unicodedata.normalize("NFKC", text).strip()
+    if len(t) >= 2 and t[0] in "Pp" and t[1] == "/":
+        return t[2:].strip()
+    return None
 
 
 def _today_str() -> str:
@@ -32,6 +41,8 @@ def build_answer(query: str) -> str:
 
 
 def _answer(query: str) -> str:
+    if not query:
+        return HELP_TEXT
     margins = data_source.get_margins()
     hit, candidates = find(query, margins["contracts"])
     if hit is None and candidates:

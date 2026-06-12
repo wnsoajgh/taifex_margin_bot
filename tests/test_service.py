@@ -48,3 +48,22 @@ def test_internal_error_is_masked(monkeypatch):
                         lambda: (_ for _ in ()).throw(RuntimeError("secret detail")))
     msg = svc.build_answer("華新")
     assert "secret" not in msg and "稍後再試" in msg
+
+
+def test_extract_query_prefix_variants():
+    assert svc.extract_query("P/群創") == "群創"
+    assert svc.extract_query("p/1605") == "1605"
+    assert svc.extract_query("Ｐ／群創") == "群創"      # 全形經 NFKC 正規化
+    assert svc.extract_query("  P/ 華新  ") == "華新"
+    assert svc.extract_query("P/") == ""
+
+
+def test_extract_query_non_command_returns_none():
+    assert svc.extract_query("群創") is None
+    assert svc.extract_query("早安") is None
+    assert svc.extract_query("") is None
+
+
+def test_empty_query_returns_help(monkeypatch):
+    _patch(monkeypatch)
+    assert "P/" in svc.build_answer("")

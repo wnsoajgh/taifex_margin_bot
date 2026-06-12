@@ -1,6 +1,8 @@
 # 股票期貨保證金查詢 LINE Bot
 
-LINE 傳「華新」「1605」「CSF」→ 回覆保證金級距、依結算價的正式保證金、依即時價的盤中估算。ETF 期貨直接顯示期交所公告的固定保證金金額。
+LINE 傳「P/華新」「P/1605」「P/CSF」→ 回覆保證金級距、依結算價的正式保證金、依即時價的盤中估算。ETF 期貨直接顯示期交所公告的固定保證金金額；處置中契約會加註警示。**只有 `P/` 開頭的訊息會觸發回覆**（不分大小寫、容許全形），其他訊息一律不回應。
+
+注意：金額為期交所公告之最低標準；券商（尤其對處置股）可能自行加收，實際以券商為準。
 
 ## 架構
 
@@ -42,7 +44,7 @@ python -m venv .venv
 ### 4. 接上 webhook
 
 1. LINE Developers → Messaging API → Webhook URL 填 `https://xxx.onrender.com/callback` → Verify 應為 Success。
-2. 用 QR code 加 bot 好友，傳「華新」測試。
+2. 用 QR code 加 bot 好友，傳「P/華新」測試。
 
 ### 5.（選配）冷啟動緩解
 

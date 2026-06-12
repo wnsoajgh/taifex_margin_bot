@@ -34,8 +34,11 @@ def format_reply(contract: dict, settlement_price: float | None, settlement_date
 
     mult = multiplier(contract)
     init, maint = contract["initial_rate"], contract["maintenance_rate"]
+    # 處置中的契約在期交所一覽表沒有級距標籤（比例已含交易所加收）
+    disposal = not contract["level"]
+    level = contract["level"] or "處置中"
     lines = header + [
-        f"{contract['level']}｜原始 {init:.2%}｜維持 {maint:.2%}｜結算 {contract['clearing_rate']:.2%}",
+        f"{level}｜原始 {init:.2%}｜維持 {maint:.2%}｜結算 {contract['clearing_rate']:.2%}",
         "",
     ]
     if settlement_price is not None:
@@ -54,4 +57,7 @@ def format_reply(contract: dict, settlement_price: float | None, settlement_date
         ]
     else:
         lines.append("📈 即時價暫時無法取得")
+    if disposal:
+        lines += ["", "⚠️ 本契約處置中：比例已含交易所加收，券商通常另行再加收（常見 +10%），實際以券商為準"]
+    lines.append("※ 金額為期交所公告最低標準，券商可能加收")
     return "\n".join(lines + _footer(data_date, stale))
