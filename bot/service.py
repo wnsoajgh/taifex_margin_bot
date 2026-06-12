@@ -38,7 +38,7 @@ def _answer(query: str) -> str:
         names = "\n".join(f"・{c['name']} ({c['code']})" for c in candidates)
         return f"找到多筆相符，請再輸入完整一點：\n{names}"
     if hit is None:
-        return f"找不到「{query}」相關的股票期貨。\n{HELP_TEXT}"
+        return f"找不到「{query[:20]}」相關的股票期貨。\n{HELP_TEXT}"   # 截斷避免回覆超過 LINE 5000 字元上限
 
     settlements = data_source.get_settlements()
     is_etf = hit["category"] == "etf"   # ETF 期貨為公告固定金額，不需任何報價
