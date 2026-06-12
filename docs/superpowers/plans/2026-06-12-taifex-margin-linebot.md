@@ -177,11 +177,13 @@ def fetch_margin_html() -> str:
 
 
 def _pct(text: str) -> float:
-    return round(float(text.replace("%", "").strip()) / 100, 6)
+    cleaned = text.replace("%", "").strip()
+    return round(float(cleaned) / 100, 6) if cleaned else 0.0   # 空儲存格→0，由 validate 擋下
 
 
 def _ntd(text: str) -> int:
-    return int(text.replace(",", "").strip())
+    cleaned = text.replace(",", "").strip()
+    return int(cleaned) if cleaned else 0
 
 
 def parse_margins(html: str) -> dict:

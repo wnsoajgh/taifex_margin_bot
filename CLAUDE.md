@@ -4,9 +4,14 @@ LINE bot：查詢台灣股票期貨保證金。架構與規格見 `docs/superpow
 
 ## 設計決策（工具與 hook 請遵循）
 
-### crawler 解析器的 fail-loud 原則
+### crawler 資料的 fail-loud 原則
 
-`crawler/margins.py` 的 `_pct()` / `_ntd()` **刻意不加**空字串或格式防護。期交所頁面改版導致儲存格內容異常時，必須在解析當下拋出 `ValueError`，讓 GitHub Actions 失敗並通知——絕不允許靜默回傳 0 之類的預設值流入資料檔。請勿為這兩個函式加上 try/except 或空值 guard。
+期交所頁面改版導致解析出異常資料時，爬蟲必須失敗（讓 GitHub Actions 通知），絕不允許壞資料寫進 `data/`。實作上分兩層：
+
+- `crawler/margins.py` 的 `_pct()` / `_ntd()`：空儲存格回傳 0；非空但格式異常直接拋 `ValueError`。
+- `crawler/run.py` 的 `validate_margins()` / `validate_settlements()`：範圍與覆蓋率檢查，0 值（含上面的空儲存格情形）必定超出範圍而拋 `ValueError`。
+
+請勿移除驗證層的範圍檢查，也勿讓任何解析失敗被 try/except 吞掉。
 
 ### 錯誤訊息不洩漏內部資訊
 

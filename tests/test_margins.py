@@ -36,3 +36,11 @@ def test_values_are_stripped():
     for c in data["contracts"]:
         for k in ("code", "stock_id", "name"):
             assert c[k] == c[k].strip() and c[k]
+
+
+def test_parses_etf_row_as_fixed_amounts():
+    data = _load()
+    nyf = next(c for c in data["contracts"] if c["code"] == "NYF")
+    assert nyf["category"] == "etf"
+    assert nyf["initial_amount"] >= nyf["maintenance_amount"] >= nyf["clearing_amount"] >= 1000
+    assert "initial_rate" not in nyf and "level" not in nyf
