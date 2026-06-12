@@ -44,6 +44,7 @@ async def callback(request: Request) -> str:
     except InvalidSignatureError:
         raise HTTPException(status_code=400, detail="invalid signature")
     except Exception:
+        # 簽章驗證後即確認收件：reply token 一次性，回 5xx 會觸發 LINE redelivery
+        # 而重送必然再失敗（token 已耗用），故記 log 後回 200
         log.exception("unexpected error handling webhook")
-        raise HTTPException(status_code=500, detail="internal error")
     return "OK"
