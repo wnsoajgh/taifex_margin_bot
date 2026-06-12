@@ -1,3 +1,4 @@
+# 每交易日台北 18:00 爬期交所保證金與結算價，commit 進 data/
 name: daily-crawl
 
 on:
