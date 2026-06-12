@@ -25,7 +25,7 @@ def get_live_price(stock_id: str) -> float | None:
         try:
             resp = httpx.get(YAHOO_URL.format(symbol=symbol), headers=HEADERS, timeout=5)
             price = parse_yahoo_price(resp.json())
-            if price is not None:
+            if price is not None and price > 0:   # 0 不是有效報價，繼續嘗試下一來源
                 return price
         except httpx.HTTPError:
             pass
@@ -34,7 +34,7 @@ def get_live_price(stock_id: str) -> float | None:
             resp = httpx.get(MIS_URL.format(market=market, stock_id=stock_id),
                              headers=HEADERS, timeout=5)
             price = parse_mis_price(resp.json())
-            if price is not None:
+            if price is not None and price > 0:   # 0 不是有效報價，繼續嘗試下一來源
                 return price
         except (httpx.HTTPError, ValueError):
             pass
