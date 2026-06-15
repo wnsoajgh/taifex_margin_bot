@@ -1,9 +1,9 @@
-# 每交易日台北 18:00 爬期交所保證金與結算價，commit 進 data/
+# 每交易日台北 17:20 爬期交所保證金與結算價，commit 進 data/
 name: daily-crawl
 
 on:
   schedule:
-    - cron: "17 10 * * 1-5"   # UTC 10:17 = 台北 18:17，週一至週五（刻意避開整點，降低 GitHub 排程被丟棄機率）
+    - cron: "20 9 * * 1-5"   # UTC 09:20 = 台北 17:20，週一至週五（刻意避開整點，降低 GitHub 排程被丟棄機率）
   workflow_dispatch: {}
 
 jobs:
