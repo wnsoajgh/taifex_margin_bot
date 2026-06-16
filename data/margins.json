@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/06/15",
+ "updated_at": "2026/06/16",
  "contracts": [
   {
    "code": "DFF",
@@ -700,10 +700,10 @@
    "name": "旺宏期貨",
    "underlying_name": "旺宏電子股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "QVF",
