@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/06/16",
+ "updated_at": "2026/06/17",
  "contracts": [
   {
    "code": "DFF",
@@ -407,17 +407,6 @@
    "clearing_rate": 0.1,
    "maintenance_rate": 0.1035,
    "initial_rate": 0.135
-  },
-  {
-   "code": "FCF",
-   "stock_id": "2014",
-   "name": "中鴻期貨",
-   "underlying_name": "中鴻鋼鐵股份有限公司",
-   "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
   },
   {
    "code": "FEF",
@@ -1283,10 +1272,10 @@
    "name": "華新科期貨",
    "underlying_name": "華新科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.24,
-   "maintenance_rate": 0.2484,
-   "initial_rate": 0.324
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "HCF",
@@ -2031,10 +2020,10 @@
    "name": "群創期貨",
    "underlying_name": "群創光電股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.18,
-   "maintenance_rate": 0.1863,
-   "initial_rate": 0.243
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "PIF",
@@ -2559,10 +2548,10 @@
    "name": "彩晶期貨",
    "underlying_name": "瀚宇彩晶股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.2,
-   "maintenance_rate": 0.207,
-   "initial_rate": 0.27
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "NQF",
