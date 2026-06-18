@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/06/17",
+ "updated_at": "2026/06/18",
  "contracts": [
   {
    "code": "DFF",
@@ -2614,10 +2614,10 @@
    "name": "信昌電期貨",
    "underlying_name": "信昌電子陶瓷股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.24,
+   "maintenance_rate": 0.2484,
+   "initial_rate": 0.324
   },
   {
    "code": "KAF",
@@ -3109,10 +3109,10 @@
    "name": "金居期貨",
    "underlying_name": "金居開發股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.3,
-   "maintenance_rate": 0.3105,
-   "initial_rate": 0.405
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "PMF",
@@ -3208,9 +3208,9 @@
    "name": "元大台灣50ETF期貨",
    "underlying_name": "元大台灣卓越50證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 52000,
-   "maintenance_amount": 54000,
-   "initial_amount": 71000
+   "clearing_amount": 58000,
+   "maintenance_amount": 61000,
+   "initial_amount": 79000
   },
   {
    "code": "SRF",
@@ -3218,9 +3218,9 @@
    "name": "小型元大台灣50ETF期貨",
    "underlying_name": "元大台灣卓越50證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 5200,
-   "maintenance_amount": 5400,
-   "initial_amount": 7100
+   "clearing_amount": 5800,
+   "maintenance_amount": 6100,
+   "initial_amount": 7900
   },
   {
    "code": "VHF",
@@ -3228,9 +3228,9 @@
    "name": "富邦科技ETF期貨",
    "underlying_name": "富邦台灣科技指數證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 33000,
-   "maintenance_amount": 35000,
-   "initial_amount": 45000
+   "clearing_amount": 37000,
+   "maintenance_amount": 39000,
+   "initial_amount": 50000
   },
   {
    "code": "PFF",
@@ -3238,9 +3238,9 @@
    "name": "元大高股息ETF期貨",
    "underlying_name": "元大台灣高股息證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 18000,
-   "maintenance_amount": 19000,
-   "initial_amount": 25000
+   "clearing_amount": 20000,
+   "maintenance_amount": 21000,
+   "initial_amount": 27000
   },
   {
    "code": "SSF",
@@ -3248,9 +3248,9 @@
    "name": "小型元大高股息ETF期貨",
    "underlying_name": "元大台灣高股息證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 1800,
-   "maintenance_amount": 1900,
-   "initial_amount": 2500
+   "clearing_amount": 2000,
+   "maintenance_amount": 2100,
+   "initial_amount": 2700
   },
   {
    "code": "OAF",
@@ -3368,9 +3368,9 @@
    "name": "國泰永續高股息ETF期貨",
    "underlying_name": "國泰台灣高股息傘型證券投資信託基金之台灣ESG永續高股息ETF證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 11000,
-   "maintenance_amount": 12000,
-   "initial_amount": 15000
+   "clearing_amount": 13000,
+   "maintenance_amount": 14000,
+   "initial_amount": 18000
   },
   {
    "code": "RXF",
@@ -3398,9 +3398,9 @@
    "name": "群益台灣精選高息ETF期貨",
    "underlying_name": "群益台灣精選高息ETF證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 11000,
-   "maintenance_amount": 12000,
-   "initial_amount": 15000
+   "clearing_amount": 13000,
+   "maintenance_amount": 14000,
+   "initial_amount": 18000
   },
   {
    "code": "RYF",
@@ -3408,9 +3408,9 @@
    "name": "群益台ESG低碳50ETF期貨",
    "underlying_name": "群益台灣ESG低碳50ETF證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 21000,
-   "maintenance_amount": 22000,
-   "initial_amount": 29000
+   "clearing_amount": 24000,
+   "maintenance_amount": 25000,
+   "initial_amount": 33000
   },
   {
    "code": "SNF",
@@ -3418,9 +3418,9 @@
    "name": "復華台灣科技優息ETF期貨",
    "underlying_name": "復華台灣科技優息ETF證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 12000,
-   "maintenance_amount": 13000,
-   "initial_amount": 17000
+   "clearing_amount": 14000,
+   "maintenance_amount": 15000,
+   "initial_amount": 19000
   },
   {
    "code": "UJF",
@@ -3438,9 +3438,9 @@
    "name": "元大台灣價值高息ETF期貨",
    "underlying_name": "元大臺灣價值高息ETF證券投資信託基金",
    "category": "etf",
-   "clearing_amount": 5000,
-   "maintenance_amount": 6000,
-   "initial_amount": 7000
+   "clearing_amount": 6000,
+   "maintenance_amount": 7000,
+   "initial_amount": 9000
   }
  ]
 }
