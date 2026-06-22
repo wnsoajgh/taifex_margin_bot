@@ -8,16 +8,19 @@ from bot.reply import format_reply
 
 log = logging.getLogger(__name__)
 STALE_DAYS = 3
-HELP_TEXT = ("查詢：P/股票名稱、P/代號 或 P/期貨代碼，例如 P/華新、P/1605、P/CSF\n"
-             "訂閱保證金調整通知：P/+華新；退訂：P/-華新；看清單：P/訂閱")
+HELP_TEXT = ("查詢：P股票名稱、P代號 或 P期貨代碼，例如 P華新、P1605、PCSF\n"
+             "訂閱保證金調整通知：P+華新；退訂：P-華新；看清單：P訂閱")
 NEED_DM = "訂閱功能請在與 bot 的一對一聊天中使用"
 
 
 def extract_query(text: str) -> str | None:
-    """只回應「P/查詢字」格式（不分大小寫、容許全形 Ｐ／）；其他訊息回 None 表示不回覆。"""
+    """只回應「P查詢字」格式（不分大小寫、容許全形 Ｐ）；其他訊息回 None 表示不回覆。"""
     t = unicodedata.normalize("NFKC", text).strip()
-    if len(t) >= 2 and t[0] in "Pp" and t[1] == "/":
-        return t[2:].strip()
+    if len(t) >= 2 and t[0] in "Pp":
+        rest = t[1:]
+        if rest.startswith("/"):
+            rest = rest[1:]
+        return rest.strip() if rest.strip() else None
     return None
 
 

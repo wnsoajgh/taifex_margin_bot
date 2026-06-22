@@ -51,11 +51,20 @@ def test_internal_error_is_masked(monkeypatch):
 
 
 def test_extract_query_prefix_variants():
-    assert svc.extract_query("P/群創") == "群創"
+    assert svc.extract_query("P群創") == "群創"
+    assert svc.extract_query("p1605") == "1605"
+    assert svc.extract_query("P+群創") == "+群創"
+    assert svc.extract_query("Ｐ群創") == "群創"        # 全形經 NFKC 正規化
+    assert svc.extract_query("P/群創") == "群創"        # 相容舊的斜線格式
     assert svc.extract_query("p/1605") == "1605"
-    assert svc.extract_query("Ｐ／群創") == "群創"      # 全形經 NFKC 正規化
+    assert svc.extract_query("Ｐ／群創") == "群創"
     assert svc.extract_query("  P/ 華新  ") == "華新"
-    assert svc.extract_query("P/") == ""
+
+
+def test_extract_query_bare_prefix_returns_none():
+    # 只打前綴、沒帶查詢字 → 不回應（避免群組裡單一 P 字誤觸）
+    assert svc.extract_query("P") is None
+    assert svc.extract_query("P/") is None
 
 
 def test_extract_query_non_command_returns_none():
@@ -66,7 +75,7 @@ def test_extract_query_non_command_returns_none():
 
 def test_empty_query_returns_help(monkeypatch):
     _patch(monkeypatch)
-    assert "P/" in svc.build_answer("")
+    assert "P+華新" in svc.build_answer("")
 
 
 def _patch_subs(monkeypatch, store):
