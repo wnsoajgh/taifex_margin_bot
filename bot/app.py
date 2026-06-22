@@ -28,7 +28,7 @@ def _reply(reply_token: str, text: str) -> None:
 @handler.add(MessageEvent, message=TextMessageContent)
 def on_text_message(event: MessageEvent) -> None:
     query = service.extract_query(event.message.text)
-    if query is None:   # 非 P/ 開頭的訊息一律不回應（避免群組洗版）
+    if query is None:   # 非 P 開頭（或只有前綴沒帶查詢字）的訊息一律不回應（避免群組洗版）
         return
     user_id = getattr(event.source, "user_id", None)   # 訂閱功能以 userId 區分使用者
     _reply(event.reply_token, service.build_answer(query, user_id))
