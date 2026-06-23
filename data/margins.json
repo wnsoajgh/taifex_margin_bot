@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/06/22",
+ "updated_at": "2026/06/23",
  "contracts": [
   {
    "code": "DFF",
@@ -1184,10 +1184,10 @@
    "name": "全新期貨",
    "underlying_name": "全新光電科技股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.3,
+   "maintenance_rate": 0.3105,
+   "initial_rate": 0.405
   },
   {
    "code": "GVF",
@@ -2053,10 +2053,10 @@
    "name": "台勝科期貨",
    "underlying_name": "台塑勝高科技股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.24,
+   "maintenance_rate": 0.2484,
+   "initial_rate": 0.324
   },
   {
    "code": "JFF",
@@ -2856,10 +2856,10 @@
    "name": "環球晶期貨",
    "underlying_name": "環球晶圓股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.24,
+   "maintenance_rate": 0.2484,
+   "initial_rate": 0.324
   },
   {
    "code": "PBF",
@@ -2867,10 +2867,10 @@
    "name": "小型環球晶期貨",
    "underlying_name": "環球晶圓股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.24,
+   "maintenance_rate": 0.2484,
+   "initial_rate": 0.324
   },
   {
    "code": "UFF",
