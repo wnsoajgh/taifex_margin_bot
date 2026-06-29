@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/06/25",
+ "updated_at": "2026/06/29",
  "contracts": [
   {
    "code": "DFF",
@@ -1228,10 +1228,10 @@
    "name": "強茂期貨",
    "underlying_name": "強茂股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "GZF",
@@ -2438,10 +2438,10 @@
    "name": "台半期貨",
    "underlying_name": "台灣半導體股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "PPF",
