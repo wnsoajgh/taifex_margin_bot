@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/06/29",
+ "updated_at": "2026/07/01",
  "contracts": [
   {
    "code": "DFF",
@@ -2614,10 +2614,10 @@
    "name": "信昌電期貨",
    "underlying_name": "信昌電子陶瓷股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.24,
-   "maintenance_rate": 0.2484,
-   "initial_rate": 0.324
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "KAF",
