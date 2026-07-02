@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/07/01",
+ "updated_at": "2026/07/02",
  "contracts": [
   {
    "code": "DFF",
@@ -145,9 +145,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "KSF",
+   "code": "SCF",
    "stock_id": "1477",
-   "name": "聚陽期貨",
+   "name": "小型聚陽期貨",
    "underlying_name": "聚陽實業股份有限公司",
    "category": "stock",
    "level": "級距2",
@@ -156,9 +156,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "SCF",
+   "code": "KSF",
    "stock_id": "1477",
-   "name": "小型聚陽期貨",
+   "name": "聚陽期貨",
    "underlying_name": "聚陽實業股份有限公司",
    "category": "stock",
    "level": "級距2",
@@ -442,9 +442,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "FGF",
+   "code": "SVF",
    "stock_id": "2059",
-   "name": "川湖期貨",
+   "name": "小型川湖期貨",
    "underlying_name": "川湖科技股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -453,9 +453,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "SVF",
+   "code": "FGF",
    "stock_id": "2059",
-   "name": "小型川湖期貨",
+   "name": "川湖期貨",
    "underlying_name": "川湖科技股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -640,9 +640,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "CDF",
+   "code": "QFF",
    "stock_id": "2330",
-   "name": "台積電期貨",
+   "name": "小型台積電期貨",
    "underlying_name": "台灣積體電路製造股份有限公司",
    "category": "stock",
    "level": "級距1",
@@ -651,9 +651,9 @@
    "initial_rate": 0.135
   },
   {
-   "code": "QFF",
+   "code": "CDF",
    "stock_id": "2330",
-   "name": "小型台積電期貨",
+   "name": "台積電期貨",
    "underlying_name": "台灣積體電路製造股份有限公司",
    "category": "stock",
    "level": "級距1",
@@ -838,9 +838,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "MJF",
+   "code": "VDF",
    "stock_id": "2360",
-   "name": "致茂期貨",
+   "name": "小型致茂期貨",
    "underlying_name": "致茂電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -849,9 +849,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "VDF",
+   "code": "MJF",
    "stock_id": "2360",
-   "name": "小型致茂期貨",
+   "name": "致茂期貨",
    "underlying_name": "致茂電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -871,9 +871,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "RKF",
+   "code": "VGF",
    "stock_id": "2368",
-   "name": "金像電期貨",
+   "name": "小型金像電期貨",
    "underlying_name": "金像電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -882,9 +882,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "VGF",
+   "code": "RKF",
    "stock_id": "2368",
-   "name": "小型金像電期貨",
+   "name": "金像電期貨",
    "underlying_name": "金像電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -975,10 +975,10 @@
    "name": "台光電期貨",
    "underlying_name": "台光電子材料股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "SFF",
@@ -986,10 +986,10 @@
    "name": "小型台光電期貨",
    "underlying_name": "台光電子材料股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "GKF",
@@ -1784,9 +1784,9 @@
    "initial_rate": 0.2295
   },
   {
-   "code": "NAF",
+   "code": "QIF",
    "stock_id": "3105",
-   "name": "穩懋期貨",
+   "name": "小型穩懋期貨",
    "underlying_name": "穩懋半導體股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -1795,9 +1795,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "QIF",
+   "code": "NAF",
    "stock_id": "3105",
-   "name": "小型穩懋期貨",
+   "name": "穩懋期貨",
    "underlying_name": "穩懋半導體股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -1993,9 +1993,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "JBF",
+   "code": "RWF",
    "stock_id": "3443",
-   "name": "創意期貨",
+   "name": "小型創意期貨",
    "underlying_name": "創意電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -2004,9 +2004,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "RWF",
+   "code": "JBF",
    "stock_id": "3443",
-   "name": "小型創意期貨",
+   "name": "創意期貨",
    "underlying_name": "創意電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -2026,9 +2026,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "PIF",
+   "code": "RSF",
    "stock_id": "3529",
-   "name": "力旺期貨",
+   "name": "小型力旺期貨",
    "underlying_name": "力旺電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -2037,9 +2037,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "RSF",
+   "code": "PIF",
    "stock_id": "3529",
-   "name": "小型力旺期貨",
+   "name": "力旺期貨",
    "underlying_name": "力旺電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -2059,9 +2059,9 @@
    "initial_rate": 0.324
   },
   {
-   "code": "JFF",
+   "code": "RFF",
    "stock_id": "3533",
-   "name": "嘉澤期貨",
+   "name": "小型嘉澤期貨",
    "underlying_name": "嘉澤端子工業股份有限公司",
    "category": "stock",
    "level": "級距2",
@@ -2070,9 +2070,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "RFF",
+   "code": "JFF",
    "stock_id": "3533",
-   "name": "小型嘉澤期貨",
+   "name": "嘉澤期貨",
    "underlying_name": "嘉澤端子工業股份有限公司",
    "category": "stock",
    "level": "級距2",
@@ -2092,9 +2092,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "JMF",
+   "code": "RGF",
    "stock_id": "3653",
-   "name": "健策期貨",
+   "name": "小型健策期貨",
    "underlying_name": "健策精密工業股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -2103,9 +2103,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "RGF",
+   "code": "JMF",
    "stock_id": "3653",
-   "name": "小型健策期貨",
+   "name": "健策期貨",
    "underlying_name": "健策精密工業股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -3005,9 +3005,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "LYF",
+   "code": "QSF",
    "stock_id": "8046",
-   "name": "南電期貨",
+   "name": "小型南電期貨",
    "underlying_name": "南亞電路板股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -3016,9 +3016,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "QSF",
+   "code": "LYF",
    "stock_id": "8046",
-   "name": "小型南電期貨",
+   "name": "南電期貨",
    "underlying_name": "南亞電路板股份有限公司",
    "category": "stock",
    "level": "級距3",
