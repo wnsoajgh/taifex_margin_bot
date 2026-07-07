@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/07/06",
+ "updated_at": "2026/07/07",
  "contracts": [
   {
    "code": "DFF",
@@ -62,10 +62,10 @@
    "name": "南亞期貨",
    "underlying_name": "南亞塑膠工業股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.18,
-   "maintenance_rate": 0.1863,
-   "initial_rate": 0.243
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "EEF",
@@ -1272,10 +1272,10 @@
    "name": "華新科期貨",
    "underlying_name": "華新科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.24,
-   "maintenance_rate": 0.2484,
-   "initial_rate": 0.324
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "HCF",
