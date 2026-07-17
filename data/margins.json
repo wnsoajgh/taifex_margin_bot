@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/07/16",
+ "updated_at": "2026/07/17",
  "contracts": [
   {
    "code": "DFF",
@@ -1272,10 +1272,10 @@
    "name": "華新科期貨",
    "underlying_name": "華新科技股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.3,
+   "maintenance_rate": 0.3105,
+   "initial_rate": 0.405
   },
   {
    "code": "HCF",
@@ -1822,10 +1822,10 @@
    "name": "景碩期貨",
    "underlying_name": "景碩科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.3,
-   "maintenance_rate": 0.3105,
-   "initial_rate": 0.405
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "NCF",
