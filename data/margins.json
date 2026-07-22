@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/07/21",
+ "updated_at": "2026/07/22",
  "contracts": [
   {
    "code": "DFF",
@@ -304,10 +304,10 @@
    "name": "中纖期貨",
    "underlying_name": "中國人造纖維股份有限公司",
    "category": "stock",
-   "level": "級距1",
-   "clearing_rate": 0.1,
-   "maintenance_rate": 0.1035,
-   "initial_rate": 0.135
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "EZF",
