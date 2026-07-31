@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/07/27",
+ "updated_at": "2026/08/03",
  "contracts": [
   {
    "code": "DFF",
@@ -198,6 +198,28 @@
    "clearing_rate": 0.12,
    "maintenance_rate": 0.1242,
    "initial_rate": 0.162
+  },
+  {
+   "code": "VMF",
+   "stock_id": "1519",
+   "name": "華城期貨",
+   "underlying_name": "華城電機股份有限公司",
+   "category": "stock",
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
+  },
+  {
+   "code": "VNF",
+   "stock_id": "1519",
+   "name": "小型華城期貨",
+   "underlying_name": "華城電機股份有限公司",
+   "category": "stock",
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "ORF",
@@ -1144,6 +1166,17 @@
    "clearing_rate": 0.12,
    "maintenance_rate": 0.1242,
    "initial_rate": 0.162
+  },
+  {
+   "code": "VOF",
+   "stock_id": "2449",
+   "name": "小型京元電子期貨",
+   "underlying_name": "京元電子股份有限公司",
+   "category": "stock",
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "GRF",
@@ -2224,6 +2257,17 @@
    "initial_rate": 0.2025
   },
   {
+   "code": "VPF",
+   "stock_id": "3711",
+   "name": "小型日月光投控期貨",
+   "underlying_name": "日月光投資控股股份有限公司",
+   "category": "stock",
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
+  },
+  {
    "code": "OZF",
    "stock_id": "3711",
    "name": "日月光投控期貨",
@@ -3124,6 +3168,17 @@
    "clearing_rate": 0.1,
    "maintenance_rate": 0.1035,
    "initial_rate": 0.135
+  },
+  {
+   "code": "VLF",
+   "stock_id": "8932",
+   "name": "智通期貨",
+   "underlying_name": "智通科創股份有限公司",
+   "category": "stock",
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "KLF",
