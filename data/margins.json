@@ -1168,9 +1168,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "VOF",
+   "code": "GRF",
    "stock_id": "2449",
-   "name": "小型京元電子期貨",
+   "name": "京元電子期貨",
    "underlying_name": "京元電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -1179,9 +1179,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "GRF",
+   "code": "VOF",
    "stock_id": "2449",
-   "name": "京元電子期貨",
+   "name": "小型京元電子期貨",
    "underlying_name": "京元電子股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -1305,10 +1305,10 @@
    "name": "華新科期貨",
    "underlying_name": "華新科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.3,
-   "maintenance_rate": 0.3105,
-   "initial_rate": 0.405
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "HCF",
@@ -2087,9 +2087,9 @@
    "underlying_name": "台塑勝高科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.32,
+   "maintenance_rate": 0.3312,
+   "initial_rate": 0.432
   },
   {
    "code": "JFF",
@@ -2257,9 +2257,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "VPF",
+   "code": "OZF",
    "stock_id": "3711",
-   "name": "小型日月光投控期貨",
+   "name": "日月光投控期貨",
    "underlying_name": "日月光投資控股股份有限公司",
    "category": "stock",
    "level": "級距2",
@@ -2268,9 +2268,9 @@
    "initial_rate": 0.162
   },
   {
-   "code": "OZF",
+   "code": "VPF",
    "stock_id": "3711",
-   "name": "日月光投控期貨",
+   "name": "小型日月光投控期貨",
    "underlying_name": "日月光投資控股股份有限公司",
    "category": "stock",
    "level": "級距2",
