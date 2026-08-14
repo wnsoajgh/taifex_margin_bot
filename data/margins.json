@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/08/12",
+ "updated_at": "2026/08/14",
  "contracts": [
   {
    "code": "DFF",
@@ -469,10 +469,10 @@
    "name": "川湖期貨",
    "underlying_name": "川湖科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "SVF",
@@ -480,10 +480,10 @@
    "name": "小型川湖期貨",
    "underlying_name": "川湖科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "FKF",
@@ -1217,10 +1217,10 @@
    "name": "全新期貨",
    "underlying_name": "全新光電科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "GVF",
@@ -1756,10 +1756,10 @@
    "name": "欣興期貨",
    "underlying_name": "欣興電子股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "ITF",
@@ -1855,10 +1855,10 @@
    "name": "景碩期貨",
    "underlying_name": "景碩科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.3,
-   "maintenance_rate": 0.3105,
-   "initial_rate": 0.405
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "NCF",
@@ -2131,9 +2131,9 @@
    "underlying_name": "健策精密工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.24,
-   "maintenance_rate": 0.2484,
-   "initial_rate": 0.324
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "RGF",
@@ -2142,9 +2142,9 @@
    "underlying_name": "健策精密工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.24,
-   "maintenance_rate": 0.2484,
-   "initial_rate": 0.324
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "UMF",
@@ -2790,10 +2790,10 @@
    "name": "台燿期貨",
    "underlying_name": "台燿科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "KEF",
