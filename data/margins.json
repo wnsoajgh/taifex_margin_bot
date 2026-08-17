@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/08/14",
+ "updated_at": "2026/08/17",
  "contracts": [
   {
    "code": "DFF",
@@ -1647,9 +1647,9 @@
    "underlying_name": "晶豪科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.24,
-   "maintenance_rate": 0.2484,
-   "initial_rate": 0.324
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "IJF",
@@ -1812,9 +1812,9 @@
    "underlying_name": "聯亞光電工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.255,
-   "maintenance_rate": 0.2639,
-   "initial_rate": 0.3443
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "NAF",
@@ -2703,9 +2703,9 @@
    "underlying_name": "聯茂電子股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "clearing_rate": 0.3,
+   "maintenance_rate": 0.3105,
+   "initial_rate": 0.405
   },
   {
    "code": "UVF",
