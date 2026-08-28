@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/08/25",
+ "updated_at": "2026/08/28",
  "contracts": [
   {
    "code": "DFF",
@@ -1217,10 +1217,10 @@
    "name": "全新期貨",
    "underlying_name": "全新光電科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.3,
-   "maintenance_rate": 0.3105,
-   "initial_rate": 0.405
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "GVF",
@@ -1283,10 +1283,10 @@
    "name": "一詮期貨",
    "underlying_name": "一詮精密工業股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.225,
+   "maintenance_rate": 0.2329,
+   "initial_rate": 0.3038
   },
   {
    "code": "HAF",
