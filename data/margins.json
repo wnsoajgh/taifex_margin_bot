@@ -3288,16 +3288,6 @@
    "initial_amount": 56000
   },
   {
-   "code": "PFF",
-   "stock_id": "0056",
-   "name": "元大高股息ETF期貨",
-   "underlying_name": "元大台灣高股息證券投資信託基金",
-   "category": "etf",
-   "clearing_amount": 22000,
-   "maintenance_amount": 23000,
-   "initial_amount": 30000
-  },
-  {
    "code": "SSF",
    "stock_id": "0056",
    "name": "小型元大高股息ETF期貨",
@@ -3306,6 +3296,16 @@
    "clearing_amount": 2200,
    "maintenance_amount": 2300,
    "initial_amount": 3000
+  },
+  {
+   "code": "PFF",
+   "stock_id": "0056",
+   "name": "元大高股息ETF期貨",
+   "underlying_name": "元大台灣高股息證券投資信託基金",
+   "category": "etf",
+   "clearing_amount": 22000,
+   "maintenance_amount": 23000,
+   "initial_amount": 30000
   },
   {
    "code": "OAF",
