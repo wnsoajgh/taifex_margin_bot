@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/08/28",
+ "updated_at": "2026/09/03",
  "contracts": [
   {
    "code": "DFF",
@@ -1283,10 +1283,10 @@
    "name": "一詮期貨",
    "underlying_name": "一詮精密工業股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.225,
-   "maintenance_rate": 0.2329,
-   "initial_rate": 0.3038
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "HAF",
@@ -2290,6 +2290,17 @@
    "initial_rate": 0.162
   },
   {
+   "code": "VQF",
+   "stock_id": "3718",
+   "name": "中光電投控期貨",
+   "underlying_name": "中光電投資控股股份有限公司",
+   "category": "stock",
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
+  },
+  {
    "code": "NIF",
    "stock_id": "4123",
    "name": "晟德期貨",
@@ -2453,17 +2464,6 @@
    "clearing_rate": 0.12,
    "maintenance_rate": 0.1242,
    "initial_rate": 0.162
-  },
-  {
-   "code": "NMF",
-   "stock_id": "5371",
-   "name": "中光電期貨",
-   "underlying_name": "中強光電股份有限公司",
-   "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
   },
   {
    "code": "RBF",
@@ -3288,16 +3288,6 @@
    "initial_amount": 56000
   },
   {
-   "code": "SSF",
-   "stock_id": "0056",
-   "name": "小型元大高股息ETF期貨",
-   "underlying_name": "元大台灣高股息證券投資信託基金",
-   "category": "etf",
-   "clearing_amount": 2200,
-   "maintenance_amount": 2300,
-   "initial_amount": 3000
-  },
-  {
    "code": "PFF",
    "stock_id": "0056",
    "name": "元大高股息ETF期貨",
@@ -3306,6 +3296,16 @@
    "clearing_amount": 22000,
    "maintenance_amount": 23000,
    "initial_amount": 30000
+  },
+  {
+   "code": "SSF",
+   "stock_id": "0056",
+   "name": "小型元大高股息ETF期貨",
+   "underlying_name": "元大台灣高股息證券投資信託基金",
+   "category": "etf",
+   "clearing_amount": 2200,
+   "maintenance_amount": 2300,
+   "initial_amount": 3000
   },
   {
    "code": "OAF",
