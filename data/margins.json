@@ -1976,10 +1976,10 @@
    "name": "精材期貨",
    "underlying_name": "精材科技股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.225,
+   "maintenance_rate": 0.2329,
+   "initial_rate": 0.3038
   },
   {
    "code": "IYF",
@@ -2009,10 +2009,10 @@
    "name": "玉晶光期貨",
    "underlying_name": "玉晶光電股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "QJF",
@@ -2020,10 +2020,10 @@
    "name": "小型玉晶光期貨",
    "underlying_name": "玉晶光電股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "",
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "JBF",
@@ -3154,9 +3154,9 @@
    "underlying_name": "金居開發股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.255,
+   "maintenance_rate": 0.2639,
+   "initial_rate": 0.3443
   },
   {
    "code": "PMF",
