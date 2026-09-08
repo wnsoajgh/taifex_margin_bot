@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/09/04",
+ "updated_at": "2026/09/08",
  "contracts": [
   {
    "code": "DFF",
@@ -1217,10 +1217,10 @@
    "name": "全新期貨",
    "underlying_name": "全新光電科技股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.3,
+   "maintenance_rate": 0.3105,
+   "initial_rate": 0.405
   },
   {
    "code": "GVF",
@@ -2009,10 +2009,10 @@
    "name": "玉晶光期貨",
    "underlying_name": "玉晶光電股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.18,
-   "maintenance_rate": 0.1863,
-   "initial_rate": 0.243
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "QJF",
@@ -2020,10 +2020,10 @@
    "name": "小型玉晶光期貨",
    "underlying_name": "玉晶光電股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.18,
-   "maintenance_rate": 0.1863,
-   "initial_rate": 0.243
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "JBF",
