@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/09/15",
+ "updated_at": "2026/09/21",
  "contracts": [
   {
    "code": "DFF",
@@ -3154,9 +3154,9 @@
    "underlying_name": "金居開發股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.34,
+   "maintenance_rate": 0.3519,
+   "initial_rate": 0.459
   },
   {
    "code": "PMF",
