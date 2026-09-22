@@ -18,9 +18,15 @@ def validate_margins(data: dict) -> None:
             raise ValueError(f"empty field in row: {c}")
         if c["category"] == "stock":
             for k in ("clearing_rate", "maintenance_rate", "initial_rate"):
-                # 範圍放寬於 spec 的 5%-40%：處置股票加收後比例較高
-                if not 0.03 <= c[k] <= 0.45:
+                # 範圍放寬於 spec 的 5%-40%：處置股票加收後比例較高。上限 60% 的由來：
+                # 最高級距原始 20.25% → 處置加收上限 22.95% → 二度處置加倍 45.9%（2026/09 PQF）。
+                if not 0.03 <= c[k] <= 0.60:
                     raise ValueError(f"{c['code']} {k} rate out of range: {c[k]}")
+            # 三者各自落在範圍內仍可能是欄位錯位，順序不變式補上這層防護
+            if not c["clearing_rate"] < c["maintenance_rate"] < c["initial_rate"]:
+                raise ValueError(
+                    f"{c['code']} rate order broken: clearing={c['clearing_rate']} "
+                    f"maintenance={c['maintenance_rate']} initial={c['initial_rate']}")
         else:  # ETF 期貨為公告固定金額
             for k in ("clearing_amount", "maintenance_amount", "initial_amount"):
                 if not 1_000 <= c[k] <= 10_000_000:
