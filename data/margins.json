@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/10/06",
+ "updated_at": "2026/10/12",
  "contracts": [
   {
    "code": "DFF",
@@ -2702,10 +2702,10 @@
    "name": "聯茂期貨",
    "underlying_name": "聯茂電子股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.225,
+   "maintenance_rate": 0.2329,
+   "initial_rate": 0.3038
   },
   {
    "code": "UVF",
@@ -3154,9 +3154,9 @@
    "underlying_name": "金居開發股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.34,
+   "maintenance_rate": 0.3519,
+   "initial_rate": 0.459
   },
   {
    "code": "PMF",
