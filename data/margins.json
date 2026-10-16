@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/10/15",
+ "updated_at": "2026/10/16",
  "contracts": [
   {
    "code": "DFF",
@@ -106,10 +106,10 @@
    "name": "台化期貨",
    "underlying_name": "台灣化學纖維股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "CRF",
@@ -139,10 +139,10 @@
    "name": "儒鴻期貨",
    "underlying_name": "儒鴻企業股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "KSF",
@@ -150,10 +150,10 @@
    "name": "聚陽期貨",
    "underlying_name": "聚陽實業股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "SCF",
@@ -161,10 +161,10 @@
    "name": "小型聚陽期貨",
    "underlying_name": "聚陽實業股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "UAF",
@@ -194,10 +194,10 @@
    "name": "中興電期貨",
    "underlying_name": "中興電工機械股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "VMF",
@@ -360,9 +360,9 @@
    "underlying_name": "台灣玻璃工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "QPF",
@@ -524,10 +524,10 @@
    "name": "光寶科期貨",
    "underlying_name": "光寶科技股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "CCF",
@@ -590,10 +590,10 @@
    "name": "鴻海期貨",
    "underlying_name": "鴻海精密工業股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "CUF",
@@ -712,9 +712,9 @@
    "underlying_name": "旺宏電子股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "QVF",
@@ -745,9 +745,9 @@
    "underlying_name": "華邦電子股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "OPF",
@@ -810,10 +810,10 @@
    "name": "鴻準期貨",
    "underlying_name": "鴻準精密工業股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "MBF",
@@ -920,10 +920,10 @@
    "name": "大同期貨",
    "underlying_name": "大同股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "GHF",
@@ -1108,9 +1108,9 @@
    "underlying_name": "南亞科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "CHF",
@@ -1338,10 +1338,10 @@
    "name": "冠德期貨",
    "underlying_name": "冠德建設股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "HLF",
@@ -1371,10 +1371,10 @@
    "name": "長榮期貨",
    "underlying_name": "長榮海運股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "HQF",
@@ -1635,10 +1635,10 @@
    "name": "神基期貨",
    "underlying_name": "神基控股股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "IIF",
@@ -1647,9 +1647,9 @@
    "underlying_name": "晶豪科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "IJF",
@@ -1756,10 +1756,10 @@
    "name": "欣興期貨",
    "underlying_name": "欣興電子股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "ITF",
@@ -1800,10 +1800,10 @@
    "name": "僑威期貨",
    "underlying_name": "僑威科技股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "OTF",
@@ -1812,9 +1812,9 @@
    "underlying_name": "聯亞光電工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "NAF",
@@ -1855,10 +1855,10 @@
    "name": "景碩期貨",
    "underlying_name": "景碩科技股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "NCF",
@@ -2087,9 +2087,9 @@
    "underlying_name": "台塑勝高科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "JFF",
@@ -2251,10 +2251,10 @@
    "name": "神達期貨",
    "underlying_name": "神達控股股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "OZF",
@@ -2262,10 +2262,10 @@
    "name": "日月光投控期貨",
    "underlying_name": "日月光投資控股股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "VPF",
@@ -2273,10 +2273,10 @@
    "name": "小型日月光投控期貨",
    "underlying_name": "日月光投資控股股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "QBF",
@@ -2295,10 +2295,10 @@
    "name": "中光電投控期貨",
    "underlying_name": "中光電投資控股股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "NIF",
@@ -2460,10 +2460,10 @@
    "name": "世界期貨",
    "underlying_name": "世界先進積體電路股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "RBF",
@@ -2471,10 +2471,10 @@
    "name": "中磊期貨",
    "underlying_name": "中磊電子股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "PEF",
@@ -2504,10 +2504,10 @@
    "name": "中美晶期貨",
    "underlying_name": "中美矽晶製品股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "JWF",
@@ -2515,10 +2515,10 @@
    "name": "長虹期貨",
    "underlying_name": "長虹建設股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "LVF",
@@ -2636,10 +2636,10 @@
    "name": "頎邦期貨",
    "underlying_name": "頎邦科技股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "JZF",
@@ -2658,10 +2658,10 @@
    "name": "信昌電期貨",
    "underlying_name": "信昌電子陶瓷股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "KAF",
@@ -2735,10 +2735,10 @@
    "name": "力成期貨",
    "underlying_name": "力成科技股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "ROF",
@@ -2801,10 +2801,10 @@
    "name": "台表科期貨",
    "underlying_name": "台灣表面黏著科技股份有限公司",
    "category": "stock",
-   "level": "級距1",
-   "clearing_rate": 0.1,
-   "maintenance_rate": 0.1035,
-   "initial_rate": 0.135
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "OHF",
@@ -3010,10 +3010,10 @@
    "name": "台灣虎航期貨",
    "underlying_name": "台灣虎航股份有限公司",
    "category": "stock",
-   "level": "級距2",
-   "clearing_rate": 0.12,
-   "maintenance_rate": 0.1242,
-   "initial_rate": 0.162
+   "level": "級距1",
+   "clearing_rate": 0.1,
+   "maintenance_rate": 0.1035,
+   "initial_rate": 0.135
   },
   {
    "code": "QZF",
@@ -3021,10 +3021,10 @@
    "name": "力積電期貨",
    "underlying_name": "力晶積成電子製造股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "KIF",
@@ -3032,10 +3032,10 @@
    "name": "台虹期貨",
    "underlying_name": "台虹科技股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "NUF",
@@ -3055,9 +3055,9 @@
    "underlying_name": "南亞電路板股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "QSF",
@@ -3066,9 +3066,9 @@
    "underlying_name": "南亞電路板股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
   },
   {
    "code": "NVF",
@@ -3131,10 +3131,10 @@
    "name": "群聯期貨",
    "underlying_name": "群聯電子股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "QNF",
@@ -3142,10 +3142,10 @@
    "name": "小型群聯期貨",
    "underlying_name": "群聯電子股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "PQF",
@@ -3154,9 +3154,9 @@
    "underlying_name": "金居開發股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "PMF",
@@ -3241,10 +3241,10 @@
    "name": "世紀鋼期貨",
    "underlying_name": "世紀鋼鐵結構股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "SWF",
@@ -3252,10 +3252,10 @@
    "name": "小型世紀鋼期貨",
    "underlying_name": "世紀鋼鐵結構股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "級距2",
+   "clearing_rate": 0.12,
+   "maintenance_rate": 0.1242,
+   "initial_rate": 0.162
   },
   {
    "code": "NYF",
