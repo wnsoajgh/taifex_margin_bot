@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/10/19",
+ "updated_at": "2026/10/20",
  "contracts": [
   {
    "code": "DFF",
@@ -1305,10 +1305,10 @@
    "name": "華新科期貨",
    "underlying_name": "華新科技股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "HCF",
@@ -2702,10 +2702,10 @@
    "name": "聯茂期貨",
    "underlying_name": "聯茂電子股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "UVF",
@@ -3288,16 +3288,6 @@
    "initial_amount": 56000
   },
   {
-   "code": "SSF",
-   "stock_id": "0056",
-   "name": "小型元大高股息ETF期貨",
-   "underlying_name": "元大台灣高股息證券投資信託基金",
-   "category": "etf",
-   "clearing_amount": 2200,
-   "maintenance_amount": 2300,
-   "initial_amount": 3000
-  },
-  {
    "code": "PFF",
    "stock_id": "0056",
    "name": "元大高股息ETF期貨",
@@ -3306,6 +3296,16 @@
    "clearing_amount": 22000,
    "maintenance_amount": 23000,
    "initial_amount": 30000
+  },
+  {
+   "code": "SSF",
+   "stock_id": "0056",
+   "name": "小型元大高股息ETF期貨",
+   "underlying_name": "元大台灣高股息證券投資信託基金",
+   "category": "etf",
+   "clearing_amount": 2200,
+   "maintenance_amount": 2300,
+   "initial_amount": 3000
   },
   {
    "code": "OAF",
