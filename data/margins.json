@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/10/28",
+ "updated_at": "2026/11/02",
  "contracts": [
   {
    "code": "DFF",
@@ -2389,6 +2389,17 @@
    "initial_rate": 0.135
   },
   {
+   "code": "VVF",
+   "stock_id": "4958",
+   "name": "小型臻鼎-KY期貨",
+   "underlying_name": "臻鼎科技控股股份有限公司",
+   "category": "stock",
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
+  },
+  {
    "code": "LUF",
    "stock_id": "4958",
    "name": "臻鼎-KY期貨",
@@ -2862,6 +2873,28 @@
    "initial_rate": 0.135
   },
   {
+   "code": "VRF",
+   "stock_id": "6442",
+   "name": "光聖期貨",
+   "underlying_name": "光紅建聖股份有限公司",
+   "category": "stock",
+   "level": "",
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
+  },
+  {
+   "code": "VSF",
+   "stock_id": "6442",
+   "name": "小型光聖期貨",
+   "underlying_name": "光紅建聖股份有限公司",
+   "category": "stock",
+   "level": "",
+   "clearing_rate": 0.17,
+   "maintenance_rate": 0.176,
+   "initial_rate": 0.2295
+  },
+  {
    "code": "RLF",
    "stock_id": "6443",
    "name": "元晶期貨",
@@ -3025,6 +3058,28 @@
    "clearing_rate": 0.16,
    "maintenance_rate": 0.1656,
    "initial_rate": 0.216
+  },
+  {
+   "code": "VTF",
+   "stock_id": "7769",
+   "name": "鴻勁期貨",
+   "underlying_name": "鴻勁精密股份有限公司",
+   "category": "stock",
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
+  },
+  {
+   "code": "VUF",
+   "stock_id": "7769",
+   "name": "小型鴻勁期貨",
+   "underlying_name": "鴻勁精密股份有限公司",
+   "category": "stock",
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "KIF",
@@ -3496,6 +3551,16 @@
    "clearing_amount": 6000,
    "maintenance_amount": 7000,
    "initial_amount": 9000
+  },
+  {
+   "code": "VWF",
+   "stock_id": "009816",
+   "name": "凱基台灣TOP50ETF期貨",
+   "underlying_name": "凱基台灣 TOP 50 ETF證券投資信託基金",
+   "category": "etf",
+   "clearing_amount": 10000,
+   "maintenance_amount": 11000,
+   "initial_amount": 14000
   }
  ]
 }
