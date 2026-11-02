@@ -2389,9 +2389,9 @@
    "initial_rate": 0.135
   },
   {
-   "code": "VVF",
+   "code": "LUF",
    "stock_id": "4958",
-   "name": "小型臻鼎-KY期貨",
+   "name": "臻鼎-KY期貨",
    "underlying_name": "臻鼎科技控股股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -2400,9 +2400,9 @@
    "initial_rate": 0.2025
   },
   {
-   "code": "LUF",
+   "code": "VVF",
    "stock_id": "4958",
-   "name": "臻鼎-KY期貨",
+   "name": "小型臻鼎-KY期貨",
    "underlying_name": "臻鼎科技控股股份有限公司",
    "category": "stock",
    "level": "級距3",
@@ -3209,9 +3209,9 @@
    "underlying_name": "金居開發股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.36,
-   "maintenance_rate": 0.3726,
-   "initial_rate": 0.486
+   "clearing_rate": 0.18,
+   "maintenance_rate": 0.1863,
+   "initial_rate": 0.243
   },
   {
    "code": "PMF",
