@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/11/06",
+ "updated_at": "2026/11/10",
  "contracts": [
   {
    "code": "DFF",
@@ -865,10 +865,10 @@
    "name": "致茂期貨",
    "underlying_name": "致茂電子股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.225,
+   "maintenance_rate": 0.2329,
+   "initial_rate": 0.3038
   },
   {
    "code": "VDF",
@@ -876,10 +876,10 @@
    "name": "小型致茂期貨",
    "underlying_name": "致茂電子股份有限公司",
    "category": "stock",
-   "level": "級距3",
-   "clearing_rate": 0.15,
-   "maintenance_rate": 0.1553,
-   "initial_rate": 0.2025
+   "level": "",
+   "clearing_rate": 0.225,
+   "maintenance_rate": 0.2329,
+   "initial_rate": 0.3038
   },
   {
    "code": "VBF",
@@ -1976,10 +1976,10 @@
    "name": "精材期貨",
    "underlying_name": "精材科技股份有限公司",
    "category": "stock",
-   "level": "",
-   "clearing_rate": 0.3,
-   "maintenance_rate": 0.3105,
-   "initial_rate": 0.405
+   "level": "級距3",
+   "clearing_rate": 0.15,
+   "maintenance_rate": 0.1553,
+   "initial_rate": 0.2025
   },
   {
    "code": "IYF",
@@ -2087,9 +2087,9 @@
    "underlying_name": "台塑勝高科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.255,
+   "maintenance_rate": 0.2639,
+   "initial_rate": 0.3443
   },
   {
    "code": "JFF",
