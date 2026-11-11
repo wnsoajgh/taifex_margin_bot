@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/11/10",
+ "updated_at": "2026/11/11",
  "contracts": [
   {
    "code": "DFF",
@@ -1856,9 +1856,9 @@
    "underlying_name": "景碩科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.24,
+   "maintenance_rate": 0.2484,
+   "initial_rate": 0.324
   },
   {
    "code": "NCF",
@@ -2714,9 +2714,9 @@
    "underlying_name": "聯茂電子股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.32,
-   "maintenance_rate": 0.3312,
-   "initial_rate": 0.432
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "UVF",
