@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/11/13",
+ "updated_at": "2026/11/16",
  "contracts": [
   {
    "code": "DFF",
@@ -1856,9 +1856,9 @@
    "underlying_name": "景碩科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.24,
-   "maintenance_rate": 0.2484,
-   "initial_rate": 0.324
+   "clearing_rate": 0.16,
+   "maintenance_rate": 0.1656,
+   "initial_rate": 0.216
   },
   {
    "code": "NCF",
