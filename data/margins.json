@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/11/17",
+ "updated_at": "2026/11/25",
  "contracts": [
   {
    "code": "DFF",
@@ -1812,9 +1812,9 @@
    "underlying_name": "聯亞光電工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.18,
-   "maintenance_rate": 0.1863,
-   "initial_rate": 0.243
+   "clearing_rate": 0.27,
+   "maintenance_rate": 0.2795,
+   "initial_rate": 0.3645
   },
   {
    "code": "NAF",
@@ -2087,9 +2087,9 @@
    "underlying_name": "台塑勝高科技股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.17,
-   "maintenance_rate": 0.176,
-   "initial_rate": 0.2295
+   "clearing_rate": 0.34,
+   "maintenance_rate": 0.3519,
+   "initial_rate": 0.459
   },
   {
    "code": "JFF",
@@ -2131,9 +2131,9 @@
    "underlying_name": "健策精密工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.24,
+   "maintenance_rate": 0.2484,
+   "initial_rate": 0.324
   },
   {
    "code": "RGF",
@@ -2142,9 +2142,9 @@
    "underlying_name": "健策精密工業股份有限公司",
    "category": "stock",
    "level": "",
-   "clearing_rate": 0.16,
-   "maintenance_rate": 0.1656,
-   "initial_rate": 0.216
+   "clearing_rate": 0.24,
+   "maintenance_rate": 0.2484,
+   "initial_rate": 0.324
   },
   {
    "code": "UMF",
